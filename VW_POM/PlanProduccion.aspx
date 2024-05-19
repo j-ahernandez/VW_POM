@@ -7,6 +7,7 @@
 <%@ Register assembly="DevExpress.Web.ASPxHtmlEditor.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxHtmlEditor" tagprefix="dx" %>
 <%@ Register assembly="DevExpress.Web.ASPxSpellChecker.v22.2, Version=22.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxSpellChecker" tagprefix="dx" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -17,20 +18,29 @@
             height: 68px;
         }
 
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .auto-style22 {
             width: 56%;
         }
 
         .auto-style23 {
-            font-size:large;
-            color:honeydew;
+            font-size: large;
+            color: honeydew;
         }
 
-        .ASPxCallbackPanel2{
-            width:100%;
+        .ASPxCallbackPanel2 {
+            width: 100%;
         }
-        #ASPxCallbackPanel2_ASPxGridView3_DXHeaderTable{
-            width:100px;
+
+        #ASPxCallbackPanel2_ASPxGridView3_DXHeaderTable {
+            width: 100px;
+        }
+        .auto-style24 {
+            width: 1016px;
         }
     </style>
     <%--<link rel="stylesheet" type="text/css" href="Content/Site.css" />--%>
@@ -69,7 +79,7 @@
                     <dx:ASPxButton ID="ASPxButton4" runat="server" OnClick="ASPxButton4_Click" Text="Request Material" Theme="BlackGlass"></dx:ASPxButton>
                     <dx:ASPxButton ID="ASPxButton6" runat="server" OnClick="ASPxButton6_Click" Text="Refresh Plant" Theme="BlackGlass"></dx:ASPxButton>
                     <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Log Trokels" Theme="BlackGlass" OnClick="ASPxButton1_Click1"></dx:ASPxButton>
-                    <dx:ASPxButton ID="ASPxButton7" runat="server" OnClick="ASPxButton7_Click" Text="Plan Produccion" Theme="BlackGlass">
+                    <dx:ASPxButton ID="ASPxButton7" runat="server" OnClick="ASPxButton7_Click" Text="Plan Produccion" Theme="BlackGlass" Visible="False">
                     </dx:ASPxButton>
                     <dx:ASPxGridViewExporter runat="server" ID="Exporter" GridViewID="ASPxGridView1"></dx:ASPxGridViewExporter>
                     <asp:HiddenField ID="HiddenField1" runat="server" />
@@ -324,60 +334,24 @@ order by RequestDate desc"></asp:SqlDataSource>
                     </tr>
                 </table>
                 <br />
-                <br />
-
-                <%-- Esta es otra tabla--%>
-                <table class="auto-style22">
+                <table class="center" style="width:100%;">
                     <tr>
-                        <td>
-                            <span class="auto-style23"><strong>Trokel: </strong></span>
+                        <td>&nbsp;</td>
+                        <td colspan="2"><span class="auto-style23"><strong>Trokel:
                             <asp:TextBox ID="txtTrokel" runat="server" AutoPostBack="True" OnTextChanged="txtTrokel_TextChanged" placeholder="Trokel..."></asp:TextBox>
-                        </td>
+                            </strong></span></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="auto-style24"><asp:Label ID="Label2" runat="server" Text="Log Trokel's"></asp:Label></td>
                         <td>
                             <asp:Label ID="Label8" runat="server" Text="Trokel's in Machine"></asp:Label>
-                            <dx:ASPxGridView ID="ASPxGridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" KeyFieldName="id" Width="415px" Theme="SoftOrange">
-                                <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
-                                <SettingsPopup>
-                                    <FilterControl AutoUpdatePosition="False">
-                                    </FilterControl>
-                                </SettingsPopup>
-                                <SettingsSearchPanel Visible="True" />
-                                <Columns>
-                                    <dx:GridViewCommandColumn VisibleIndex="0">
-                                    </dx:GridViewCommandColumn>
-                                    <dx:GridViewDataTextColumn FieldName="id" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" Visible="False" VisibleIndex="1">
-                                        <EditFormSettings Visible="False" />
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="# Employee" FieldName="CodEmployee" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="2">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Machine" FieldName="Machine" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="3">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn FieldName="Shift" LoadReadOnlyValueFromDataModel="True" Visible="False" VisibleIndex="4">
-                                    </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn Caption="Trokel" FieldName="Trokel" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="5">
-                                    </dx:GridViewDataTextColumn>
-                                </Columns>
-                            </dx:ASPxGridView>
-                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString2 %>" SelectCommand="Select * 
-from Prod.Tokel_in_Machine 
-where Machine=@Machinne 
-	and Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
-					when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
-and Status=1 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end ">
-                                <SelectParameters>
-                                    <asp:ControlParameter ControlID="HiddenField3" Name="Machinne" PropertyName="Value" />
-                                </SelectParameters>
-                            </asp:SqlDataSource>
-                        </td>
-                        <td>
-                            <%--<asp:Label ID="Label9" runat="server" Text="Trokel's in Machine"></asp:Label>--%>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            <div style="padding:40px; align-content:center;">
-                            <h2>Log Trokel</h2>
-                            <dx:ASPxGridView ID="ASPxGridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Theme="SoftOrange" Width="415px">
+                        <td>&nbsp;</td>
+                        <td class="auto-style24">
+                            <dx:ASPxGridView ID="ASPxGridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Theme="SoftOrange" Width="918px">
                                 <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
                                 <SettingsPopup>
                                     <FilterControl AutoUpdatePosition="False">
@@ -385,13 +359,13 @@ and Status=1 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETD
                                 </SettingsPopup>
                                 <SettingsSearchPanel Visible="True" />
                                 <Columns>
-                                    <dx:GridViewDataTextColumn FieldName="Machine" VisibleIndex="0">
+                                    <dx:GridViewDataTextColumn Width="120px" FieldName="Machine" VisibleIndex="0">
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn FieldName="CodEmployee" VisibleIndex="1">
+                                    <dx:GridViewDataTextColumn Width="120px" FieldName="CodEmployee" VisibleIndex="1">
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn FieldName="Shift" VisibleIndex="2">
+                                    <dx:GridViewDataTextColumn Width="50px" FieldName="Shift" VisibleIndex="2">
                                     </dx:GridViewDataTextColumn>
-                                    <dx:GridViewDataTextColumn FieldName="Trokeles" ReadOnly="True" VisibleIndex="3">
+                                    <dx:GridViewDataTextColumn Width="540px" FieldName="Trokeles" ReadOnly="True" VisibleIndex="3">
                                     </dx:GridViewDataTextColumn>
                                 </Columns>
                             </dx:ASPxGridView>
@@ -413,6 +387,67 @@ and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as da
 and TM.Status=1
 group by TM.Machine,TM.CodEmployee,TM.Shift) dt
 order by SUBSTRING(dt.Machine,6,2)"></asp:SqlDataSource>
+                        </td>
+                        <td>
+                            <dx:ASPxGridView ID="ASPxGridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" KeyFieldName="id" Theme="SoftOrange" Width="415px">
+                                <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                <SettingsPopup>
+                                    <FilterControl AutoUpdatePosition="False">
+                                    </FilterControl>
+                                </SettingsPopup>
+                                <SettingsSearchPanel Visible="True" />
+                                <Columns>
+                                    <dx:GridViewCommandColumn VisibleIndex="0">
+                                    </dx:GridViewCommandColumn>
+                                    <dx:GridViewDataTextColumn FieldName="id" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" Visible="False" VisibleIndex="1">
+                                        <EditFormSettings Visible="False" />
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="# Employee" FieldName="CodEmployee" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="2">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Machine" FieldName="Machine" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="3">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Shift" LoadReadOnlyValueFromDataModel="True" Visible="False" VisibleIndex="4">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Trokel" Width="540px"  FieldName="Trokel" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="5">
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                            </dx:ASPxGridView>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString2 %>" SelectCommand="Select * 
+from Prod.Tokel_in_Machine 
+where Machine=@Machinne 
+	and Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+					when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+and Status=1 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end ">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="HiddenField3" Name="Machinne" PropertyName="Value" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td class="auto-style24">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <br />
+
+                <%-- Esta es otra tabla--%>
+                <table hidden="hidden" class="auto-style22">
+                    <tr>
+                        <td>
+                            <span class="auto-style23"><strong>Trokel: </strong></span>
+                        </td>
+                        <td>
+                            &nbsp;</td>
+                        <td>
+                            <%--<asp:Label ID="Label9" runat="server" Text="Trokel's in Machine"></asp:Label>--%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <div style="padding:40px; align-content:center;">
+                            
                         </div>
                                 </td>                      
                     </tr>
@@ -485,10 +520,10 @@ FROM (
 ORDER BY 
     SUBSTRING(dt.Machine, 6, 2);"></asp:SqlDataSource>
             </asp:Panel>
-            <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="200px" ClientInstanceName="CallbackPanel">
+            <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" ClientInstanceName="CallbackPanel">
                 <PanelCollection>
                     <dx:PanelContent runat="server">
-                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False"  EnableTheming="True" Theme="SoftOrange" OnHtmlDataCellPrepared="ASPxGridView1_HtmlDataCellPrepared" OnHtmlRowPrepared="ASPxGridView1_HtmlRowPrepared">
+                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False"  EnableTheming="True" Theme="SoftOrange" OnHtmlDataCellPrepared="ASPxGridView1_HtmlDataCellPrepared" OnHtmlRowPrepared="ASPxGridView1_HtmlRowPrepared" Width="100%">
                             <Settings ShowFilterRow="True" ShowFooter="True" />
                             <SettingsDataSecurity AllowDelete="False" AllowInsert="False" AllowEdit="False" />
                             <SettingsPopup>
@@ -547,9 +582,9 @@ ORDER BY
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataTextColumn FieldName="InvTotal" ShowInCustomizationForm="True" VisibleIndex="22">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="StatusMaterial" ShowInCustomizationForm="True" VisibleIndex="23">
+                                <dx:GridViewDataTextColumn FieldName="StatusMaterial" Visible="false" ShowInCustomizationForm="True" VisibleIndex="23">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="OrderMaquina" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="24">
+                                <dx:GridViewDataTextColumn FieldName="OrderMaquina" Visible="false" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="24">
                                 </dx:GridViewDataTextColumn>
                             </Columns>
                             <TotalSummary>
