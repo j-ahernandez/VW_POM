@@ -1,0 +1,504 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanProduccion.aspx.cs" Inherits="VW_POM.PlanProduccion" %>
+
+<%@ Register Assembly="DevExpress.Web.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .auto-style9 {
+            height: 68px;
+        }
+
+        .auto-style12 {
+            width: 149px;
+            height: 26px;
+        }
+
+        .auto-style18 {
+            width: 58px;
+        }
+
+        .auto-style19 {
+            height: 68px;
+            width: 58px;
+        }
+
+        .auto-style20 {
+            width: 58px;
+            height: 26px;
+        }
+
+        .auto-style21 {
+            width: 727px;
+            height: 26px;
+        }
+
+        .auto-style22 {
+            width: 56%;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+<link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css" />    
+<link rel="stylesheet" type="text/css" href="~/css/sweetalert.css" />
+<link rel="stylesheet" type="text/css" href="~/fontawesome/all.min.css" />
+<script src="../Scripts/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../Scripts/sweetalert.min.js"></script> 
+<script src="../Scripts/script.js"></script> 
+<script src="../fontawesome/all.min.js"></script>
+</head>
+<body>
+    <asp:Image ID="Image1" ImageAlign="Right" runat="server" Height="49px" ImageUrl="~/logo_heds_Puz_icon.ico" Width="65px" />
+    V.012023.01<div style="margin: 1 auto; text-align: left;">
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Plan de Produccion Corte"></asp:Label>
+    </div>
+
+
+    <form id="form1" runat="server">
+        <div style="margin: 1 auto; text-align: left; float: left">
+            <dx:ASPxButton ID="ASPxButton4" runat="server" OnClick="ASPxButton4_Click" Text="Request Material" Theme="BlackGlass"></dx:ASPxButton>
+            <dx:ASPxButton ID="ASPxButton6" runat="server" OnClick="ASPxButton6_Click" Text="Refresh Plant" Theme="BlackGlass"></dx:ASPxButton>
+            <dx:ASPxButton ID="ASPxButton1" runat="server" Text="Log Trokels" Theme="BlackGlass" OnClick="ASPxButton1_Click1"></dx:ASPxButton>
+            <dx:ASPxGridViewExporter runat="server" ID="Exporter" GridViewID="ASPxGridView1"></dx:ASPxGridViewExporter>
+            <asp:HiddenField ID="HiddenField1" runat="server" />
+            <asp:HiddenField ID="HiddenField2" runat="server" />
+            <asp:HiddenField ID="HiddenField3" runat="server" />
+        </div>
+        <div style="margin: 1 auto; text-align: right; float: right">
+            <dx:ASPxButton ID="ASPxButton5" runat="server" HorizontalAlign="Right" OnClick="ASPxButton5_Click" Text="Close" Theme="BlackGlass">
+            </dx:ASPxButton>
+        </div>
+        <div style="margin: 1 auto; text-align: left;">
+            <asp:Panel ID="Panel1" runat="server">
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="auto-style20"></td>
+                        <td class="auto-style21" style="text-align: right"></td>
+                        <td class="auto-style12"></td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style19">Gafete:
+                            <asp:TextBox ID="TextBox3" runat="server" placeholder="required..." required="required"></asp:TextBox>
+                            <dx:ASPxComboBox ID="ASPxComboBox1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSourceCutCode" OnSelectedIndexChanged="ASPxComboBox1_SelectedIndexChanged" TextField="SetCode" Theme="Default" ValueField="SetCode">
+                            </dx:ASPxComboBox>
+                            <asp:SqlDataSource ID="SqlDataSourceCutCode" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="Select SetCode=' ' union all 
+Select distinct CutCode
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where P.DOH&lt;=5 and P.Area='Plan de Corte'
+and P.CutCode not in (
+Select Product from Prod.Material_Requirement_Komax where ProductSend is null)"></asp:SqlDataSource>
+                        </td>
+                        <td class="auto-style9" colspan="2">
+                            <asp:Label ID="Label6" runat="server" Text="Scanned Tikect Number"></asp:Label>
+                            <asp:TextBox ID="TextBox4" runat="server" AutoPostBack="True" OnTextChanged="TextBox4_TextChanged" placeholder="Tikect..."></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style18">
+                            <br />
+                            <asp:Label ID="Label9" runat="server" Text="Material Controlado:"></asp:Label>
+                            <asp:Label ID="TmlControl" runat="server" style="color: #FFFFFF; font-weight: 700; background-color: #FF0000" Text="N/A"></asp:Label>
+                            <dx:ASPxGridView ID="ASPxGridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSourceRequest" EnableTheming="True" Theme="Default" Width="362px">
+                                <SettingsPopup>
+                                    <HeaderFilter MinHeight="140px">
+                                    </HeaderFilter>
+                                </SettingsPopup>
+                                <Columns>
+                                    <dx:GridViewDataTextColumn Caption="Send" FieldName="ID" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="4">
+                                        <DataItemTemplate>
+                                            <asp:ImageButton ID="btnSendData" runat="server" CommandArgument='<%# Eval("Tml1") %>' Height="26px" ImageUrl="~/Save.png" OnClick="btnSendData_Click" Width="21px" />
+                                        </DataItemTemplate>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Tem/Seal/Wire" FieldName="Tml1" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="0">
+                                        <%-- <DataItemTemplate>
+                                                        <asp:ImageButton ID="btnSendData" runat="server" CommandArgument='<%# Eval("Tml1") %>' Height="26px" ImageUrl="~/Save.png" OnClick="btnSendData_Click" Width="21px" />
+                                                    </DataItemTemplate>--%>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="SQ" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="1">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Color" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="2">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Quantity" ShowInCustomizationForm="True" VisibleIndex="3">
+                                        <DataItemTemplate>
+                                            <dx:ASPxTextBox ID="ASPxTextBox1" runat="server" Width="80px">
+                                            </dx:ASPxTextBox>
+                                        </DataItemTemplate>
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                            </dx:ASPxGridView>
+                            <asp:SqlDataSource ID="SqlDataSourceRequest" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="Select D.ID,D.Tml1,D.SQ,D.Color from (
+Select P.ID,Tml1,SQ='',Color=''
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where  P.DOH&lt;=5 and P.Area='Plan de Corte' and CutCode=@CutCode
+union all
+Select P.ID,Tml2,SQ='',Color=''
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where  P.DOH&lt;=5 and P.Area='Plan de Corte' and CutCode=@CutCode
+union all
+Select P.ID,Seal1=ISNULL(Seal1,''),SQ='',Color=''
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where  P.DOH&lt;=5 and P.Area='Plan de Corte' and CutCode=@CutCode
+union all
+Select P.ID,Seal2=ISNULL(Seal2,''),SQ='',Color=''
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where  P.DOH&lt;=5 and P.Area='Plan de Corte' and CutCode=@CutCode
+union all
+Select P.ID,Wire=CAST(Wire as varchar),SQ=CAST(SQ as varchar),Color
+from Prod.PlanProduccion P 
+	join Prod.UPH U on ltrim(rtrim(P.Machine))=ltrim(rtrim(U.Maquina)) 
+where  P.DOH&lt;=5 and P.Area='Plan de Corte' and CutCode=@CutCode ) D where D.Tml1&gt;''">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="HiddenField2" Name="CutCode" PropertyName="Value" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                        <td colspan="2">
+                            <dx:ASPxCallbackPanel ID="ASPxCallbackPanel2" runat="server" Width="200px" ClientInstanceName="CallbackPanel">
+                                <PanelCollection>
+                                    <dx:PanelContent runat="server">
+                                        <dx:ASPxGridView ID="ASPxGridView3" runat="server" AutoGenerateColumns="False" KeyFieldName="RequestUser" DataSourceID="SqlDataSourceMaterial_Required" Width="987px">
+                                            <Settings ShowFilterRow="True" />
+                                            <SettingsPopup>
+                                                <HeaderFilter MinHeight="140px">
+                                                </HeaderFilter>
+                                            </SettingsPopup>
+                                            <SettingsSearchPanel Visible="True" />
+                                            <SettingsPager Position="TopAndBottom" PageSize="50">
+                                                <PageSizeItemSettings Items="50, 100, 150" />
+                                            </SettingsPager>
+                                            <Settings ShowGroupPanel="true" VerticalScrollBarMode="Visible" HorizontalScrollBarMode="Visible" VerticalScrollableHeight="100" />
+                                            <SettingsPager Mode="EndlessPaging" PageSize="5" />
+                                            <Columns>
+                                                <dx:GridViewCommandColumn ShowClearFilterButton="True" VisibleIndex="0" Visible="False">
+                                                </dx:GridViewCommandColumn>
+                                                <dx:GridViewDataTextColumn FieldName="Machine" VisibleIndex="1">
+                                                    <Settings AllowAutoFilter="True" FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="CutCode" VisibleIndex="2">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="Required" VisibleIndex="3">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn FieldName="Qty" VisibleIndex="4">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataDateColumn FieldName="RequestDate" VisibleIndex="5">
+                                                    <PropertiesDateEdit EditFormat="DateTime" DisplayFormatString="M/d/yyyy HH:mm:ss"></PropertiesDateEdit>
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataDateColumn>
+                                                <dx:GridViewDataTextColumn FieldName="RequestUser" VisibleIndex="6">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataDateColumn FieldName="SendDate" VisibleIndex="7">
+                                                    <PropertiesDateEdit EditFormat="DateTime" DisplayFormatString="M/d/yyyy HH:mm:ss"></PropertiesDateEdit>
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataDateColumn>
+                                                <dx:GridViewDataTextColumn FieldName="SendUser" VisibleIndex="8">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                                <dx:GridViewDataTextColumn Caption="Comment WhareHouse" FieldName="ComentarioBodega" ShowInCustomizationForm="True" VisibleIndex="9">
+                                                    <Settings FilterMode="DisplayText" />
+                                                </dx:GridViewDataTextColumn>
+                                            </Columns>
+                                        </dx:ASPxGridView>
+                                    </dx:PanelContent>
+                                </PanelCollection>
+                            </dx:ASPxCallbackPanel>
+                            <asp:SqlDataSource ID="SqlDataSourceMaterial_Required" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="Select Machine,CutCode,Required=Product,Qty,RequestDate,RequestUser,SendDate,SendUser,ProductSend,ComentarioBodega=Coment_wharehouse
+from Prod.Material_Requirement_Komax
+where CAST(RequestDate as date)=CAST(GETDATE() as date)
+order by RequestDate desc"></asp:SqlDataSource>
+                        </td>
+                    </tr>
+                </table>
+                <table class="auto-style22">
+                    <tr>
+                        <td>
+                            <asp:TextBox ID="txtTrokel" runat="server" AutoPostBack="True" OnTextChanged="txtTrokel_TextChanged" placeholder="Trokel..."></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:Label ID="Label8" runat="server" Text="Trokel's in Machine"></asp:Label>
+                            <dx:ASPxGridView ID="ASPxGridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" KeyFieldName="id" Width="415px">
+                                <Settings ShowFilterRow="True" />
+                                <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                <Columns>
+                                    <dx:GridViewCommandColumn ShowClearFilterButton="True" VisibleIndex="0">
+                                    </dx:GridViewCommandColumn>
+                                    <dx:GridViewDataTextColumn FieldName="id" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" Visible="False" VisibleIndex="1">
+                                        <EditFormSettings Visible="False" />
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="# Employee" FieldName="CodEmployee" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="2">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Machine" FieldName="Machine" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="3">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Shift" LoadReadOnlyValueFromDataModel="True" Visible="False" VisibleIndex="4">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Trokel" FieldName="Trokel" LoadReadOnlyValueFromDataModel="True" ReadOnly="True" VisibleIndex="5">
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                            </dx:ASPxGridView>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="Select * 
+from Prod.Tokel_in_Machine 
+where Machine=@Machinne 
+	and Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+					when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+and Status=1 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end ">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="HiddenField3" Name="Machinne" PropertyName="Value" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                        <td>
+                            <%--<asp:Label ID="Label9" runat="server" Text="Trokel's in Machine"></asp:Label>--%>
+                            Log Trokel
+                            <dx:ASPxGridView ID="ASPxGridView5" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="415px">
+                                <Settings ShowFilterRow="True" />
+                                <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                <SettingsPopup>
+                                    <FilterControl AutoUpdatePosition="False">
+                                    </FilterControl>
+                                </SettingsPopup>
+                                <Columns>
+                                    <dx:GridViewDataTextColumn FieldName="Machine" ReadOnly="True" VisibleIndex="0">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="# Employee" FieldName="CodEmployee" ReadOnly="True" VisibleIndex="1">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Shift" ReadOnly="True" Visible="False" VisibleIndex="2">
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Trokeles" ReadOnly="True" VisibleIndex="3">
+                                        <Settings AutoFilterCondition="Contains" />
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                            </dx:ASPxGridView>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="
+Select * 
+From (
+Select	distinct TM.Machine,TM.CodEmployee,TM.Shift,
+				 Trokeles=STUFF((Select  ',' + CAST(Trokel  AS varchar(10))
+								 from Prod.Tokel_in_Machine T
+								 where T.Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+				 						             when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+								 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end
+								 and T.Status=1 and T.Machine=TM.Machine
+				 FOR XML PATH(''), TYPE).value('.[1]', 'nvarchar(4000)'), 1, 1, '')
+from Prod.Tokel_in_Machine TM
+where TM.Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+					 when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end
+and TM.Status=1
+group by TM.Machine,TM.CodEmployee,TM.Shift) dt
+order by SUBSTRING(dt.Machine,6,2)"></asp:SqlDataSource>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server">
+                <table style="width:100%;">
+                    <tr>
+                        <td>
+                            <dx:ASPxGridView ID="ASPxGridView6" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Width="509px">
+                                <Settings ShowFilterRow="True" />
+                                <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+                                <SettingsPopup>
+                                    <FilterControl AutoUpdatePosition="False">
+                                    </FilterControl>
+                                </SettingsPopup>
+                                <Columns>
+                                    <dx:GridViewCommandColumn ShowClearFilterButton="True" Visible="False" VisibleIndex="0">
+                                    </dx:GridViewCommandColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Machine" ReadOnly="True" VisibleIndex="1">
+                                        <CellStyle HorizontalAlign="Center">
+                                        </CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="# Employee" FieldName="CodEmployee" ReadOnly="True" VisibleIndex="2">
+                                        <CellStyle HorizontalAlign="Center">
+                                        </CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn FieldName="Shift" ReadOnly="True" VisibleIndex="3">
+                                        <CellStyle HorizontalAlign="Center">
+                                        </CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                    <dx:GridViewDataTextColumn Caption="Trokel Numbers" FieldName="Trokeles" ReadOnly="True" VisibleIndex="4">
+                                        <Settings AutoFilterCondition="Contains" />
+                                        <CellStyle HorizontalAlign="Center">
+                                        </CellStyle>
+                                    </dx:GridViewDataTextColumn>
+                                </Columns>
+                            </dx:ASPxGridView>
+                        </td>
+                    </tr>
+                </table>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>" SelectCommand="
+Select * 
+From (
+Select	distinct TM.Machine,TM.CodEmployee,TM.Shift,
+				 Trokeles=STUFF((Select  ',' + CAST(Trokel  AS varchar(10))
+								 from Prod.Tokel_in_Machine T
+								 where T.Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+				 						             when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+								 and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end
+								 and T.Status=1 and T.Machine=TM.Machine
+				 FOR XML PATH(''), TYPE).value('.[1]', 'nvarchar(4000)'), 1, 1, '')
+from Prod.Tokel_in_Machine TM
+where TM.Shift =case when CONVERT(VARCHAR(5),getdate(),108)&gt;='06:00:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='14:47:59.000' then 1
+					 when CONVERT(VARCHAR(5),getdate(),108)&gt;='14:48:00.000' and CONVERT(VARCHAR(5),getdate(),108)&lt;='23:14:59.000' then 2 else 3 end
+and CAST(RegisterDate as date)&gt;=case when Shift=3 then CAST(GETDATE()-1 as date) else CAST(GETDATE() as date) end
+and TM.Status=1
+group by TM.Machine,TM.CodEmployee,TM.Shift) dt
+order by SUBSTRING(dt.Machine,6,2)"></asp:SqlDataSource>
+            </asp:Panel>
+            <dx:ASPxCallbackPanel ID="ASPxCallbackPanel1" runat="server" Width="200px" ClientInstanceName="CallbackPanel">
+                <PanelCollection>
+                    <dx:PanelContent runat="server">
+                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="SetCode" EnableTheming="True" Theme="Default" OnHtmlDataCellPrepared="ASPxGridView1_HtmlDataCellPrepared" OnHtmlRowPrepared="ASPxGridView1_HtmlRowPrepared">
+                            <Settings ShowFilterRow="True" ShowFooter="True" />
+                            <SettingsDataSecurity AllowDelete="False" AllowInsert="False" AllowEdit="False" />
+                            <SettingsPopup>
+                                <HeaderFilter MinHeight="140px"></HeaderFilter>
+                            </SettingsPopup>
+                            <SettingsSearchPanel Visible="True" />
+                            <SettingsPager Position="TopAndBottom" PageSize="50">
+                                <PageSizeItemSettings Items="50, 100, 150" />
+                            </SettingsPager>
+                            <Columns>
+                                <dx:GridViewCommandColumn ShowNewButtonInHeader="true" ShowEditButton="true" VisibleIndex="0" Visible="False" />
+                                <dx:GridViewCommandColumn Visible="False" VisibleIndex="1" ShowInCustomizationForm="True" ShowClearFilterButton="True">
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn Caption="Bahia" ReadOnly="true" FieldName="Bahia" VisibleIndex="3" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="Cut Code" ReadOnly="true" FieldName="CutCode" VisibleIndex="4" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="Set Code" ReadOnly="true" FieldName="SetCode" VisibleIndex="5" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Relation" ReadOnly="true" VisibleIndex="6" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Locacion" ReadOnly="true" VisibleIndex="7" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Maquina" ReadOnly="true" VisibleIndex="8" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Tml1" ReadOnly="true" VisibleIndex="9" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Seal1" ReadOnly="true" VisibleIndex="10" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Tml2" ReadOnly="true" VisibleIndex="11" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Seal2" ReadOnly="true" VisibleIndex="12" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Cable" ReadOnly="true" VisibleIndex="13" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Calibre" ReadOnly="true" VisibleIndex="14" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Color" ReadOnly="true" VisibleIndex="15" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Length" ReadOnly="true" VisibleIndex="16" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="Status" ReadOnly="true" FieldName="Status" VisibleIndex="17" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="DOH" ReadOnly="true" VisibleIndex="18" ShowInCustomizationForm="True" SortIndex="0" SortOrder="Ascending">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Cortar" ReadOnly="true" VisibleIndex="19" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Cut?" ReadOnly="true" VisibleIndex="20" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Result" ReadOnly="true" VisibleIndex="21" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Release" ReadOnly="true" VisibleIndex="22" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="Diferencia" ReadOnly="true" VisibleIndex="23" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="InvTotal" ReadOnly="true" VisibleIndex="24" ShowInCustomizationForm="True">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn Caption="Status Material" Visible="false" FieldName="StatusMaterial" ShowInCustomizationForm="True" VisibleIndex="2">
+                                </dx:GridViewDataTextColumn>
+                            </Columns>
+                            <TotalSummary>
+                                <dx:ASPxSummaryItem FieldName="DOH" SummaryType="Count" />
+                                <dx:ASPxSummaryItem FieldName="Cortar" SummaryType="Sum" />
+                            </TotalSummary>
+                            <FormatConditions>
+                                <dx:GridViewFormatConditionHighlight FieldName="DOH" Expression="[DOH] = 0" Format="Custom">
+                                    <CellStyle BackColor="Red">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                                <dx:GridViewFormatConditionHighlight Expression="Iif([StatusMaterial] &lt;&gt; '' And [Tml1] = [StatusMaterial], [Tml1] = [StatusMaterial], 0)" FieldName="Tml1" Format="Custom">
+                                    <CellStyle BackColor="LightBlue">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                                <dx:GridViewFormatConditionHighlight Expression="Iif([StatusMaterial] &lt;&gt; '' And [Tml2] = [StatusMaterial], [Tml2] = [StatusMaterial], [StatusMaterial])" FieldName="Tml2" Format="Custom">
+                                    <CellStyle BackColor="LightBlue">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                                <dx:GridViewFormatConditionHighlight Expression="[Seal1] = [StatusMaterial]" FieldName="Seal1" Format="Custom">
+                                    <CellStyle BackColor="LightGreen">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                                <dx:GridViewFormatConditionHighlight Expression="[Seal2] = [StatusMaterial]" FieldName="Seal2" Format="Custom">
+                                    <CellStyle BackColor="LightGreen">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                                <dx:GridViewFormatConditionHighlight Expression="[Cable] = [StatusMaterial]" FieldName="Cable" Format="Custom">
+                                    <CellStyle BackColor="#FFFF66">
+                                    </CellStyle>
+                                </dx:GridViewFormatConditionHighlight>
+                            </FormatConditions>
+                        </dx:ASPxGridView>
+                    </dx:PanelContent>
+                </PanelCollection>
+            </dx:ASPxCallbackPanel>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HEDSConnectionString %>"
+                SelectCommand="SELECT ID, Bahia, CutCode, SetCode, Relation, Locacion, Maquina, Tml1, Seal1, Tml2, Seal2, Cable, Calibre, Color, Length, Status, DOH, Cortar, [Cut?], Result, Release, Diferencia, InvTotal, StatusMaterial, OrderMaquina FROM (SELECT DISTINCT P.ID, U.Bahia, P.CutCode, P.SetCode, P.Relation, P.Location AS Locacion, P.Machine AS Maquina, ISNULL(P.Tml1, '') AS Tml1, ISNULL(P.Seal1, '') AS Seal1, ISNULL(P.Tml2, '') AS Tml2, ISNULL(P.Seal2, '') AS Seal2, ISNULL(P.Wire, '') AS Cable, P.SQ AS Calibre, P.Color, P.LengthCode AS Length, P.Status1 AS Status, P.DOH, P.Cortar, P.Cut_Plan AS [Cut?], P.Result, P.Release, P.Diferencia, P.InvTotal, MRK.ProductSend AS StatusMaterial, SUBSTRING(P.Machine, 6, 2) AS OrderMaquina FROM Prod.PlanProduccion AS P INNER JOIN Prod.UPH AS U ON LTRIM(RTRIM(P.Machine)) = LTRIM(RTRIM(U.Maquina)) LEFT OUTER JOIN Prod.Material_Requirement_Komax AS MRK ON MRK.CutCode = P.CutCode WHERE (LTRIM(RTRIM(U.IPMachine)) LIKE @IP) AND (P.DOH &lt;= 5) AND (P.Area = 'Plan de Corte')) AS x ORDER BY OrderMaquina">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="HiddenField1" Name="IP" PropertyName="Value" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+    var postponedCallbackRequired = false;
+    function UpDateGridChanged(s, e) {
+        if (CallbackPanel.InCallback())
+            postponedCallbackRequired = true;
+        else
+            CallbackPanel.PerformCallback();
+    }
+    function OnEndCallback(s, e) {
+        if (postponedCallbackRequired) {
+            CallbackPanel.PerformCallback();
+            postponedCallbackRequired = false;
+        }
+    }
+    function OnCellClick(cell, value) {
+        cell.style.backgroundColor = "red";
+        console.log(value);
+    }
+    function ShowEditPopup(element, FieldName, ticketId, isMultipleSelected) {
+        popup1.ShowAtElement(eval(element));
+    }
+    function OnClick(s, e) {
+
+        popup1.Show();
+    }
+    var postponedCallbackRequired = false;
+    function UpDateGridChanged(s, e) {
+        if (CallbackPanel.InCallback())
+            postponedCallbackRequired = true;
+        else
+            CallbackPanel.PerformCallback();
+    }
+    function OnEndCallback(s, e) {
+        if (postponedCallbackRequired) {
+            CallbackPanel.PerformCallback();
+            postponedCallbackRequired = false;
+        }
+</script>
+</html>

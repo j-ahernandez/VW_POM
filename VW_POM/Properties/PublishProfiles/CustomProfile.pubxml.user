@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\evelasquez02\OneDrive - Lear Corporation\Desktop\Projects HEDS\VW_POM\Publish</_PublishTargetUrl>
+    <History>True|2024-05-16T02:45:06.7764057Z;True|2024-05-15T19:46:01.9372631-06:00;False|2024-03-07T14:58:02.8712491-06:00;True|2023-09-27T15:00:21.0124560-06:00;True|2023-09-04T10:01:49.2692365-06:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ClosedXML.dll">
+      <publishTime>05/18/2022 08:45:02</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Dashboard.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:31:37</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Dashboard.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:31:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Data.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.DataAccess.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Map.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:04</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:07</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:17</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Office.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:19</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Pdf.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:20</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.PivotGrid.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Printing.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:21</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:20</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.RichEdit.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:57</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Sparkline.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Spreadsheet.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:29</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Utils.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:24</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxDiagram.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:21</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxGantt.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxHtmlEditor.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxRichEdit.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxScheduler.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxSpellChecker.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxSpreadsheet.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.ASPxTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:29</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.Resources.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.Resources.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:10</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.Resources.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.Resources.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:31</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.Resources.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:00</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:42</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:19</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:48</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Web.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:40</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.Xpo.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:48</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraBars.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraBars.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraBars.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraBars.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:41</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraBars.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:50</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:42</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraCharts.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:51</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:15</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:32</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraEditors.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:52</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:33</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraGauges.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:34</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraLayout.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPrinting.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPrinting.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPrinting.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPrinting.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraPrinting.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v19.1.Web.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v20.1.Web.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v20.2.Web.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v22.1.Web.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraReports.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraScheduler.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraTreeList.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraTreeList.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:23</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraTreeList.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:48</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraTreeList.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:48</publishTime>
+    </File>
+    <File Include="bin/de/DevExpress.XtraTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:33:01</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:42</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Charts.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:50</publishTime>
+    </File>
+    <File Include="bin/DevExpress.CodeParser.v19.1.dll">
+      <publishTime>10/09/2019 12:53:01</publishTime>
+    </File>
+    <File Include="bin/DevExpress.CodeParser.v20.1.dll">
+      <publishTime>11/19/2020 16:51:48</publishTime>
+    </File>
+    <File Include="bin/DevExpress.CodeParser.v20.2.dll">
+      <publishTime>04/20/2021 09:25:32</publishTime>
+    </File>
+    <File Include="bin/DevExpress.CodeParser.v22.1.dll">
+      <publishTime>08/22/2022 09:47:54</publishTime>
+    </File>
+    <File Include="bin/DevExpress.CodeParser.v22.2.dll">
+      <publishTime>02/09/2023 09:31:31</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:31:37</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v22.2.Web.dll">
+      <publishTime>02/09/2023 09:31:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Dashboard.v22.2.Web.WebForms.dll">
+      <publishTime>02/09/2023 09:31:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.Desktop.v20.1.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.Desktop.v20.2.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.Desktop.v22.1.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.Desktop.v22.2.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v19.1.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v20.1.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v20.2.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v22.1.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Data.v22.2.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v19.1.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v20.1.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v20.2.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v22.1.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataAccess.v22.2.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataVisualization.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataVisualization.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.DataVisualization.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Drawing.v22.1.dll">
+      <publishTime>08/22/2022 09:48:02</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Drawing.v22.2.dll">
+      <publishTime>02/09/2023 09:31:43</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Images.v19.1.dll">
+      <publishTime>10/09/2019 12:53:07</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Images.v22.2.dll">
+      <publishTime>02/09/2023 09:31:57</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Map.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:04</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:07</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:17</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Office.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:19</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v20.1.Drawing.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v20.2.Drawing.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v22.1.Drawing.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Pdf.v22.2.Drawing.dll">
+      <publishTime>02/09/2023 09:32:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.PivotGrid.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Printing.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:21</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v19.1.Export.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v20.1.Export.dll">
+      <publishTime>11/19/2020 16:52:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v20.2.Export.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v22.1.Export.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:57</publishTime>
+    </File>
+    <File Include="bin/DevExpress.RichEdit.v22.2.Export.dll">
+      <publishTime>02/09/2023 09:32:57</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Sparkline.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.SpellChecker.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Spreadsheet.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.TreeMap.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v19.1.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v20.1.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v20.2.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v22.1.dll">
+      <publishTime>08/22/2022 09:48:29</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Utils.v22.2.dll">
+      <publishTime>02/09/2023 09:32:24</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxDiagram.v22.2.dll">
+      <publishTime>02/09/2023 09:31:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxGantt.v22.2.dll">
+      <publishTime>02/09/2023 09:31:21</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxGauges.v22.2.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxHtmlEditor.v22.2.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxPivotGrid.v22.2.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxRichEdit.v22.2.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxScheduler.v22.2.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpellChecker.v22.2.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxSpreadsheet.v22.2.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v19.1.dll">
+      <publishTime>10/09/2019 12:53:01</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v20.1.dll">
+      <publishTime>11/19/2020 16:51:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v20.2.dll">
+      <publishTime>04/20/2021 09:25:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v22.1.dll">
+      <publishTime>08/22/2022 09:47:49</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxThemes.v22.2.dll">
+      <publishTime>02/09/2023 09:31:24</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.ASPxTreeList.v22.2.dll">
+      <publishTime>02/09/2023 09:31:29</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Bootstrap.v22.2.dll">
+      <publishTime>02/09/2023 09:31:30</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Resources.v19.1.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Resources.v20.1.dll">
+      <publishTime>11/19/2020 16:52:10</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Resources.v20.2.dll">
+      <publishTime>04/20/2021 09:26:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Resources.v22.1.dll">
+      <publishTime>08/22/2022 09:48:31</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.Resources.v22.2.dll">
+      <publishTime>02/09/2023 09:32:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v19.1.dll">
+      <publishTime>10/09/2019 12:53:00</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v20.1.dll">
+      <publishTime>11/19/2020 16:51:42</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v20.2.dll">
+      <publishTime>04/20/2021 09:25:19</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v22.1.dll">
+      <publishTime>08/22/2022 09:47:47</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Web.v22.2.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v19.1.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v20.1.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v20.2.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v22.1.dll">
+      <publishTime>08/22/2022 09:48:40</publishTime>
+    </File>
+    <File Include="bin/DevExpress.Xpo.v22.2.dll">
+      <publishTime>02/09/2023 09:32:48</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraBars.v19.1.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraBars.v20.1.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraBars.v20.2.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraBars.v22.1.dll">
+      <publishTime>08/22/2022 09:48:41</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraBars.v22.2.dll">
+      <publishTime>02/09/2023 09:32:49</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v19.1.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v20.1.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v20.2.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v22.1.dll">
+      <publishTime>08/22/2022 09:48:42</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v22.2.dll">
+      <publishTime>02/09/2023 09:32:50</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraCharts.v22.2.Web.dll">
+      <publishTime>02/09/2023 09:31:20</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v19.1.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v20.1.dll">
+      <publishTime>11/19/2020 16:52:15</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v20.2.dll">
+      <publishTime>04/20/2021 09:26:32</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v22.1.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraEditors.v22.2.dll">
+      <publishTime>02/09/2023 09:32:52</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v19.1.Core.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v20.1.Core.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v20.2.Core.dll">
+      <publishTime>04/20/2021 09:26:33</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v22.1.Core.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraGauges.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:53</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v19.1.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v20.1.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v20.2.dll">
+      <publishTime>04/20/2021 09:26:34</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v22.1.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraLayout.v22.2.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPrinting.v19.1.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPrinting.v20.1.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPrinting.v20.2.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPrinting.v22.1.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraPrinting.v22.2.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v19.1.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v19.1.Web.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v19.1.Web.WebForms.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.1.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.1.Web.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.1.Web.WebForms.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.2.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.2.Web.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v20.2.Web.WebForms.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.1.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.1.Web.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.1.Web.WebForms.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.2.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.2.Web.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraReports.v22.2.Web.WebForms.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraScheduler.v22.2.Core.Desktop.dll">
+      <publishTime>02/09/2023 09:32:58</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraScheduler.v22.2.Core.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeList.v19.1.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeList.v20.1.dll">
+      <publishTime>11/19/2020 16:52:23</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeList.v20.2.dll">
+      <publishTime>04/20/2021 09:26:48</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeList.v22.1.dll">
+      <publishTime>08/22/2022 09:48:48</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeList.v22.2.dll">
+      <publishTime>02/09/2023 09:33:01</publishTime>
+    </File>
+    <File Include="bin/DevExpress.XtraTreeMap.v22.2.dll">
+      <publishTime>02/09/2023 09:33:02</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>05/18/2022 08:45:02</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Dashboard.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:31:37</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Dashboard.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:31:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Data.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.DataAccess.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Map.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:04</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:07</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:17</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Office.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:19</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Pdf.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:20</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.PivotGrid.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Printing.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:21</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:20</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.RichEdit.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:57</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Sparkline.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Spreadsheet.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:29</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Utils.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:24</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxDiagram.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:21</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxGantt.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxHtmlEditor.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxRichEdit.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxScheduler.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxSpellChecker.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxSpreadsheet.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.ASPxTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:29</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.Resources.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.Resources.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:10</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.Resources.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.Resources.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:31</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.Resources.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:00</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:42</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:19</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:48</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Web.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:40</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.Xpo.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:48</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraBars.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraBars.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraBars.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraBars.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:41</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraBars.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:50</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:42</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraCharts.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:51</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:15</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:32</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraEditors.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:52</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:33</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraGauges.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:34</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraLayout.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPrinting.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPrinting.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPrinting.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPrinting.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraPrinting.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v19.1.Web.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v20.1.Web.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v20.2.Web.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v22.1.Web.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraReports.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraScheduler.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraTreeList.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraTreeList.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:23</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraTreeList.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:48</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraTreeList.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:48</publishTime>
+    </File>
+    <File Include="bin/es/DevExpress.XtraTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:33:01</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Dashboard.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:31:37</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Dashboard.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:31:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Data.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:59</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.DataAccess.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:39</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Map.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:04</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:07</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:17</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Office.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:19</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Pdf.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:20</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.PivotGrid.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Printing.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:21</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:20</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.RichEdit.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:57</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Sparkline.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Spreadsheet.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:29</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Utils.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:24</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxDiagram.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:21</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxGantt.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxHtmlEditor.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:22</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxRichEdit.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxScheduler.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxSpellChecker.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxSpreadsheet.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:22</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.ASPxTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:29</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.Resources.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.Resources.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:10</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.Resources.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.Resources.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:31</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.Resources.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:00</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:42</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:19</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:47:48</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Web.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:31:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:40</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.Xpo.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:48</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraBars.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraBars.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraBars.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraBars.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:41</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraBars.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:50</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:42</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraCharts.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:51</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:15</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:32</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraEditors.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:52</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:33</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v22.1.Core.resources.dll">
+      <publishTime>08/22/2022 09:48:43</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraGauges.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:34</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraLayout.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:54</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPrinting.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPrinting.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPrinting.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPrinting.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraPrinting.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:55</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v19.1.Web.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v20.1.Web.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v20.2.Web.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:44</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v22.1.Web.resources.dll">
+      <publishTime>08/22/2022 09:48:45</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraReports.v22.2.Web.resources.dll">
+      <publishTime>02/09/2023 09:32:56</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraScheduler.v22.2.Core.resources.dll">
+      <publishTime>02/09/2023 09:32:59</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraTreeList.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraTreeList.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:23</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraTreeList.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:48</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraTreeList.v22.1.resources.dll">
+      <publishTime>08/22/2022 09:48:48</publishTime>
+    </File>
+    <File Include="bin/ja/DevExpress.XtraTreeList.v22.2.resources.dll">
+      <publishTime>02/09/2023 09:33:01</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Managed.Core.targets">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.AccessControl.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>10/24/2023 09:56:40</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Data.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.DataAccess.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:03</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.DataAccess.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:51</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.DataAccess.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:38</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Office.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Office.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:07</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Office.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:17</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Pdf.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Pdf.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Pdf.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.PivotGrid.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Printing.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.RichEdit.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.RichEdit.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:20</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.RichEdit.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Sparkline.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Utils.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Utils.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:08</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Utils.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.Resources.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:14</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.Resources.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:10</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.Resources.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:23</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:00</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:51:42</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Web.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:25:19</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.Xpo.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraBars.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraBars.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:13</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraBars.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:27</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraCharts.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraCharts.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:14</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraCharts.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:28</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraEditors.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraEditors.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:15</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraEditors.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:32</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraGauges.v19.1.Core.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraGauges.v20.1.Core.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraGauges.v20.2.Core.resources.dll">
+      <publishTime>04/20/2021 09:26:33</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraLayout.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraLayout.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:16</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraLayout.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:34</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraPrinting.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraPrinting.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:17</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraPrinting.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:35</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v19.1.Web.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v20.1.Web.resources.dll">
+      <publishTime>11/19/2020 16:52:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraReports.v20.2.Web.resources.dll">
+      <publishTime>04/20/2021 09:26:38</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraTreeList.v19.1.resources.dll">
+      <publishTime>10/09/2019 12:53:18</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraTreeList.v20.1.resources.dll">
+      <publishTime>11/19/2020 16:52:23</publishTime>
+    </File>
+    <File Include="bin/ru/DevExpress.XtraTreeList.v20.2.resources.dll">
+      <publishTime>04/20/2021 09:26:48</publishTime>
+    </File>
+    <File Include="bin/SQLOperations.dll">
+      <publishTime>05/18/2022 08:45:02</publishTime>
+    </File>
+    <File Include="bin/VW_POM.dll">
+      <publishTime>05/15/2024 20:44:56</publishTime>
+    </File>
+    <File Include="bin/VW_POM.pdb">
+      <publishTime>05/15/2024 20:44:56</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.css">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.css.map">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.min.css">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap-grid.min.css.map">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.css">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.css.map">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.min.css">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap-reboot.min.css.map">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="css/bootstrap.css">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/bootstrap.css.map">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css.map">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="css/sweetalert.css">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="fontawesome/all.min.css">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/all.min.js">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-brands-400.ttf">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-brands-400.woff2">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-regular-400.ttf">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-regular-400.woff2">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-solid-900.ttf">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-solid-900.woff2">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-v4compatibility.ttf">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="fontawesome/webfonts/fa-v4compatibility.woff2">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.js">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.js.map">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.min.js">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.bundle.min.js.map">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.js">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.js.map">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js.map">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="logo_heds_Puz_icon.ico">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="Models/logo_heds_Puz_icon.ico">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="PlanProduccion.aspx">
+      <publishTime>05/15/2024 20:36:53</publishTime>
+    </File>
+    <File Include="Preview_POM.aspx">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="Produccion/RequestMaterial.ascx">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="Produccion/ViewRequest.aspx">
+      <publishTime>10/24/2023 09:56:11</publishTime>
+    </File>
+    <File Include="Save.png">
+      <publishTime>10/24/2023 09:56:29</publishTime>
+    </File>
+    <File Include="Scripts/chosen.jquery.js">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="Scripts/script.js">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert.min.js">
+      <publishTime>10/24/2023 09:56:10</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/15/2024 19:45:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
