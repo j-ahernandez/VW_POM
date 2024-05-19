@@ -16,6 +16,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 
+
 namespace VW_POM
 {
 
@@ -24,22 +25,21 @@ namespace VW_POM
         void PlanLoad(string Machine)
         {
                 this.ASPxGridView1.DataSource = MyData._SQLOperations.SQLDataTable(@"SELECT ID, Bahia, CutCode, SetCode, Relation, Locacion, Maquina, Tml1, Seal1, Tml2, Seal2, Cable, Calibre, Color, Length, Status, DOH, Cortar, [Cut?], 
-Result, Release, Diferencia, InvTotal, StatusMaterial, OrderMaquina 
+Result, Release, Diferencia, InvTotal--, StatusMaterial, OrderMaquina 
 FROM (
     SELECT DISTINCT 
         P.ID,U.Bahia,P.CutCode,P.SetCode,P.Relation,P.Location AS Locacion,P.Machine AS Maquina, 
         ISNULL(P.Tml1, '') AS Tml1,ISNULL(P.Seal1, '') AS Seal1,ISNULL(P.Tml2, '') AS Tml2,ISNULL(P.Seal2, '') AS Seal2, 
         ISNULL(P.Wire, '') AS Cable,P.SQ AS Calibre,P.Color,P.LengthCode AS Length,P.Status1 AS Status,P.DOH,P.Cortar, 
-        P.Cut_Plan AS [Cut?],P.Result,P.Release,P.Diferencia,P.InvTotal,MRK.ProductSend AS StatusMaterial, 
-        SUBSTRING(P.Machine, 6, 2) AS OrderMaquina 
+        P.Cut_Plan AS [Cut?],P.Result,P.Release,P.Diferencia,P.InvTotal--,MRK.ProductSend AS StatusMaterial,SUBSTRING(P.Machine, 6, 2) AS OrderMaquina 
     FROM Prod.PlanProduccion AS P 
     INNER JOIN Prod.UPH AS U ON LTRIM(RTRIM(P.Machine)) = LTRIM(RTRIM(U.Maquina)) 
-    LEFT OUTER JOIN Prod.Material_Requirement_Komax AS MRK ON MRK.CutCode = P.CutCode 
+    --LEFT OUTER JOIN Prod.Material_Requirement_Komax AS MRK ON MRK.CutCode = P.CutCode 
     WHERE (LTRIM(RTRIM(U.IPMachine)) LIKE '%"+Machine+@"%') 
         AND (P.DOH <= 5) 
         AND (P.Area = 'Plan de Corte')
 ) AS x 
-ORDER BY OrderMaquina");
+--ORDER BY OrderMaquina");
                 this.ASPxGridView1.DataBind();
         }
         private string _CutCode = "";
@@ -52,7 +52,7 @@ ORDER BY OrderMaquina");
             /*string ComputerName = "SAP-80-1007";
             this.HiddenField1.Value = ComputerName;*/
             
-            DataTable dtUPH = MyData._SQLOperations.SQLDataTable("Select * from Prod.UPH where IPMachine = '" + ComputerName + "'");
+            DataTable dtUPH = MyData._SQLOperations.SQLDataTable("Select * from Prod.UPH where IPMachine ='" + ComputerName + "'");//'" + ComputerName + "'
             if (dtUPH.Rows.Count > 0)
             {
                 this.HiddenField3.Value = dtUPH.Rows[0]["Maquina"].ToString();
@@ -601,8 +601,8 @@ ORDER BY OrderMaquina");
                 this.txtTrokel.Focus();
                 this.ASPxGridView4.DataBind();
                 this.ASPxGridView5.DataBind();
-                this.ASPxGridView6.DataBind();
-                this.ASPxGridView7.DataBind();
+                //this.ASPxGridView6.DataBind();
+                //this.ASPxGridView7.DataBind();
             }
             catch (Exception)
             {
